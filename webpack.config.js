@@ -1,5 +1,8 @@
+
 const { VueLoaderPlugin } = require('vue-loader');
 
+//n indica a Webpack cómo procesar diferentes tipos de archivos en una aplicación, 
+// como archivos JavaScript y archivos Vue, utilizando diferentes loaders y plugins
 module.exports = {
   entry: './src/app/index.js',
   output: {

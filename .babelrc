@@ -1,3 +1,4 @@
+//transpilador de js
 {
   "presets": [
     ["@babel/preset-env", {

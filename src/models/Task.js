@@ -1,10 +1,20 @@
+//se importan las dependencias de mongoose
 const mongoose = require('mongoose');
+
+//se define la estructura del documento 
 const { Schema } = mongoose;
 
-// Esquema para definir cómo lucirán los datos
-const TaskSchema = new Schema ({
+//estructura de cada tarea
+const TaskSchema = new Schema({
     title: String,
-    description: String // Cambiando 'descripcion' a 'description'
+    description: String,
+    hour: String,
+    status: {
+        type: String,
+        enum: ['No realizada', 'En progreso', 'completada'],
+        default: 'No realizada'
+    }
 });
 
+//se exporta el modelo Task 
 module.exports = mongoose.model('Task', TaskSchema);
